@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Verdana, Geneva, sans-serif;
-  
+  cursor: pointer;
   }
   
   .flex{
@@ -11,7 +11,7 @@ body {
   }
     
   .header_area {
-    height: 60px;
+    height: 70px;
    
   }
   
@@ -48,7 +48,7 @@ body {
 
   
   }
-  
+
   .social_area ul li {
     display: inline-block;
     padding: 12px 14px;
@@ -135,63 +135,74 @@ body {
      margin-top: 20px;
 }
 #option1{
+  margin-top: 5px;
     background: #004aad;
     color: white;
     max-width: 20rem;
     margin-left: 1rem;
     border-radius: 0.5rem;
     box-shadow: 0rem 0.5rem 0.3rem 0.1rem rgb(199, 199, 207);
-    height: 8rem;
+    height: 11rem;
 }
 #option2{
+  margin-top: 5px;
     background: #004aad;
     color: white;
     max-width: 20rem;
     margin-left: 5rem;
     border-radius: 0.5rem;
     box-shadow: 0rem 0.5rem 0.3rem 0.1rem rgb(199, 199, 207);
-    height: 8rem;
+    height: 11rem;
 }
 #option3{
+  margin-top: 5px;
     background: #004aad;
     color: white;
-    max-width: 20rem;
+    max-width: 190rem;
     margin-left: 9.6rem;
     border-radius: 0.5rem;
     box-shadow: 0rem 0.5rem 0.3rem 0.1rem rgb(199, 199, 207);
-    height: 8rem;
+    height: 11rem;
 }
 #option4{
+  margin-top: 55px;
     background: #004aad;
     color: white;
     max-width: 20rem;
     margin-left: 1rem;
     border-radius: 0.5rem;
     box-shadow: 0rem 0.5rem 0.3rem 0.1rem rgb(199, 199, 207);
-    height: 8rem;
+    height: 11rem;
 }
 #option5{
+  margin-top: 55px;
     background: #004aad;
     color: white;
     max-width: 20rem;
     margin-left: 5rem;
     border-radius: 0.5rem;
     box-shadow: 0rem 0.5rem 0.3rem 0.1rem rgb(199, 199, 207);
-    height: 8rem;
+    height: 11rem;
 }
 #option6{
+  margin-top: 55px;
     background: #004aad;
     color: white;
     max-width: 20rem;
     margin-left: 9.6rem;
     border-radius: 0.5rem;
     box-shadow: 0rem 0.5rem 0.3rem 0.1rem rgb(199, 199, 207);
-    height: 8rem;
+    height: 11rem;
 }
 
 #map{
     width:100vw;
 
+}
+#no-main{
+  background: url(/images2/blue1.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .parent{
     display: grid;
@@ -200,9 +211,17 @@ body {
     grid-auto-rows: 120px;
     cursor: pointer; 
     text-align: center;
+    /* background: url(/images2/blue1.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover; */
+    height: 370px;
 
 }
 .navigate{
     color: white;
 
+}
+a{
+  text-decoration: none;
+  color: white;
 }

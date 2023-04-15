@@ -3,7 +3,6 @@ body {
     padding: 0;
     font-family: Verdana, Geneva, sans-serif;
     cursor: pointer;
-  
   }
   
   .flex{
@@ -26,7 +25,7 @@ body {
   .logo img {
     margin-left: 150px;
     width: 150px;
-    height: 80px;
+    height: 90px;
 
   }
   
@@ -71,9 +70,7 @@ body {
     margin-top:40px;
     height: 750px;
     width: 100%;
-    background: url("/images2/blue1.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: url("https://lirp.cdn-website.com/md/unsplash/dms3rep/multi/opt/photo-1506521781263-d8422e82f27a-1920w.jpg");
     display: flex;
     align-items: center;
     justify-content: center;
@@ -104,11 +101,6 @@ body {
     border-radius: 20px;
 }
 
-#main-content {
-    margin: 12px 20px;
-    font-size: 16px;
-
-}
 #main_menu ul {
   display: flex;
   list-style: none;
@@ -131,3 +123,58 @@ body {
 #menu a:hover {
   color: #d8bfa2;
 }
+  #confirmation{
+    padding-top: 5px;
+    height: 200px;
+    /* margin-right: 500px; */
+    margin-left: 200px;
+    display: grid;
+    align-items: center;
+  }
+  #heading{
+    margin-left: 120px;
+    color: #004aad;
+  }
+  #warning{
+    background-color:rgba(238, 184, 184, 0.649);
+    width: 58%;
+    color: rgb(226, 32, 32);
+    font-weight: bolder;
+    margin-left: 200px;
+  }
+  #Explore-btn{
+    
+    width: 160px;
+    height: 51px;
+    margin-top: 80px;
+    margin-left: 100px;
+    background: #004aad;
+    border-radius: 15px;
+    color: white;
+    align-items: center;
+
+    }
+    #cancel{
+        top: 800px;
+    }
+    .inner-section-2{
+        display: flex;
+        flex-direction: column;
+        align-items:center ;
+    }
+    .timer {
+        margin-top: 50px;
+        font-size: 20px;
+    }
+    /* .confirm-payment:hover{
+
+        box-sizing: border-box;
+    
+        position: absolute;
+        width: 160px;
+        height: 51px;
+        background-color: white;
+        border: 4px solid #004aad;
+        color: #004aad;
+        border-radius: 15px;
+    } */

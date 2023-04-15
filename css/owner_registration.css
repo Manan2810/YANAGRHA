@@ -5,6 +5,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	
 }
 html,
 body {
@@ -71,10 +72,11 @@ button {
 	gap: 15px;
 }
 .input-group {
+    width: 300px;
 	gap: 5px;
 }
 .input-group label {
-	font-size: 14px;
+	font-size: 11px;
 	color: #242424;
 	font-weight: bold;
 }
@@ -100,11 +102,3 @@ button {
 	text-transform: uppercase;
 	padding: 15px 0;
 }
-a{
-	text-decoration: none;
-	color: white;
-}
-
-
-
-  
