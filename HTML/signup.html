@@ -33,9 +33,9 @@
 		<h5>Sign Up</h5>
 		<p>Already having an account?<a href="/HTML/login.html">Don't have an account?</a> it takes less than a minute</p>
 		<div class="inputs">
-			<input type="text" placeholder="user name">
+			<input id="username" type="text" placeholder="user name" name="name">
 			<br>
-			<input type="password" placeholder="Password">
+			<input id="password" type="password" placeholder="Password" name="password">
             <br>
             <input type="password" placeholder="Confirm Password">
 		</div>
@@ -52,11 +52,12 @@
 		</div>
 			
 			<br>
-			<a href="/HTML/login.html"><button>Sign Up</button></a>
+			<button onclick="storeData()">Sign Up</button>
 	</div>
 	
 </div>
-
+<div class="xxx"></div>
+<script src="/JAVASCRIPT/user_localstorage.js"></script>
   
 </body>
 </html>
