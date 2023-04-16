@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,20 +70,11 @@
     <script src="/JAVASCRIPT/main.js"></script>
     <script src="/JAVASCRIPT/timer.js"></script>
     <!-- <script src="/JAVASCRIPT/unique_code_generator.js"></script> -->
-    <script>
-      function create_unique_string(string_length){
-          var unique_string = "";
-          var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz";
-          for (var i = 0; i < string_length; i++) {
-              unique_string += characters.charAt(Math.floor(Math.random() * characters.length));
-          }
-          return unique_string;
-      }
-
-      function generateUniqueString() {
-          var uniqueString = create_unique_string(6);
-          document.getElementById('unique_id').innerHTML = uniqueString;
-      }
+    <script src="/JAVASCRIPT/user_localstorage.js">
+      
   </script>
 </body>
 </html>
+
+
+
