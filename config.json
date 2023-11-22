@@ -1,0 +1,9 @@
+{
+    "params": {
+        "local_server": "True",
+        "local_uri": "",
+        "prod_uri": "",
+        "gmail-user": "",
+        "gmail-password": ""
+    }
+}

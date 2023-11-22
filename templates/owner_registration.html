@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Owner Registration</title>
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owner_registration.css') }}" />
+</head>
+<body>
+    <form class="form">
+        <div class="checkout-method">
+            <h3 style="margin-left: 120px;text-align: center; font-weight: bolder;">Register</h3>
+        </div>
+        <div class="checkout-information">
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="text" id="email" placeholder="Enter your Email Address" />
+            </div>
+            <div class="input-group">
+                <label for="number">Name</label>
+                <input type="text" id="name" placeholder="Enter your Name" />
+            </div>
+            <div class="horizontal-grid">
+                <div class="input-group">
+                    <label for="Mobile_no">Phone Number</label>
+                    <input type="text" id="Mobile_no" placeholder="Enter Mobile Number" />
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="location">Address</label>
+                <input type="text" id="location" placeholder="Enter your Address" />
+            </div>
+        </div>
+        <button onclick="storeData1()" class="button button--checkout">Register</button>
+    </form>
+    <script src="{{ url_for('static', filename='JAVASCRIPT/owner_localstorage.js') }}"></script>
+</body>
+</html>

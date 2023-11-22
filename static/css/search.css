@@ -5,7 +5,6 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	
 }
 html,
 body {
@@ -18,7 +17,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	display: grid;
 	place-items: center;
-	background-image: url(/images2/blue1.jpeg);
+	background-image: url(/static/images2/blue1.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -72,11 +71,10 @@ button {
 	gap: 15px;
 }
 .input-group {
-    width: 300px;
 	gap: 5px;
 }
 .input-group label {
-	font-size: 11px;
+	font-size: 14px;
 	color: #242424;
 	font-weight: bold;
 }
@@ -102,3 +100,11 @@ button {
 	text-transform: uppercase;
 	padding: 15px 0;
 }
+a{
+	text-decoration: none;
+	color: white;
+}
+
+
+
+  

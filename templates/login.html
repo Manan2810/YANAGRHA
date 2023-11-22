@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login page</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+
+<div class="box-form">
+  <div class="left">
+    <div class="overlay">
+      <p>
+        <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='images2/logo2.jpg') }}" alt=""></a>
+      </p>
+      
+      <span>
+        <p>Login with social media</p>
+        <a href=""><i class="fa facebook" id="facbook-login"></i>Facebook</a>
+        <a href=""><i class="fa fa-google" aria-hidden="true"></i> Google</a>
+      </span>
+    </div>
+  </div>
+
+  <div class="right">
+    <h5>Login</h5>
+    <p>Don't have an account? <a href="{{ url_for('signup') }}">Create Your Account</a> it takes less than a minute</p>
+
+    <form method="POST" action="{{ url_for('login') }}">
+      <div class="inputs">
+        <input type="text" placeholder="Username" name="username">
+        <br>
+        <input type="password" placeholder="Password" name="password">
+      </div>
+
+      <br><br>
+
+      <div class="xyz">
+        <label>
+          <input type="checkbox" name="item" checked/>
+          <span class="text-checkbox">Remember me</span>
+        </label>
+        <p>Forgot password?</p>
+      </div>
+
+      <br>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

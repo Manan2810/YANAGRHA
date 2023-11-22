@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/payment.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/payment.css') }}">
     <title>Payment</title>
 </head>
 
 <body>
     <div class="container">
         <div class="nav-bar">
-            <img src="/images2/logo2.jpg" alt="logo" id="logo">
+            <img src="{{ url_for('static', filename='images2/logo2.jpg') }}" alt="logo" id="logo">
         </div>
         <div class="payment">
             <!-- <img src="/images/pexels-deva-darshan-1173777.jpg" alt="" id="background"> -->
@@ -33,17 +33,16 @@
                     <i class="fa-brands fa-cc-paypal fa-2xl" id="paypal"></i>
                     <i class="fa-brands fa-google-pay fa-2xl" id="gpay"></i>
                     <i class="fa-solid fa-arrow-right fa-2xl" id="arrow1"></i>
-                    <<i class="fa-brands fa-cc-amazon-pay fa-2xl" id="amazonpay"></i>
+                    <i class="fa-brands fa-cc-amazon-pay fa-2xl" id="amazonpay"></i>
                 </div>
                 <div class="confirm-payment">
-                    <h4 id="cancel" style=" font-weight: 600; text-align: center; left: 10%; top: 20%;right:20%; font-size: 23px; width: 30px;" id="cancel-heading"><a href="/HTML/booking_confirmation.html">Confirm<a class="align" href="/HTML/no_booking.html">&#10003</a></a></h4>   
+                    <h4 id="cancel" style=" font-weight: 600; text-align: center; left: 10%; top: 20%;right:20%; font-size: 23px; width: 30px;" id="cancel-heading"><a href="{{ url_for('booking_confirmation') }}">Confirm<a class="align" href="{{ url_for('no_booking') }}">&#10003</a></a></h4>   
                 </div>
                 <div class="cancel-payment">
                     <h4 id="cancel" style=" font-weight: 600; text-align: center; left: 20%; top: 20%;right:20%; font-size: 23px;" id="cancel-heading">Cancel&#10007</h4>   
                 </div>
             </div>
         </div>
-
     </div>
     <script src="https://kit.fontawesome.com/a6a76f1360.js" crossorigin="anonymous"></script>
 </body>

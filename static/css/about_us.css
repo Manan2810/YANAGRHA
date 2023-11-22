@@ -71,7 +71,7 @@ body {
     margin-top:40px;
     height: 750px;
     width: 100%;
-    background: url("/images2/blue1.jpeg");
+    background: url("/static/images2/blue1.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about_us.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+    <!-- ~ navigation bar -->
+    <header class="header_area">
+        <div class="header">
+          <div class="logo">
+            <img src="{{ url_for('static', filename='images2/logo2.jpg') }}" alt="">
+          </div>
+          <div class="right_header_area">
+            <div class="social_area">
+              <ul>
+                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+              </ul>
+            </div>
+            <div class="menu-bar">
+              <nav id="main_menu">
+                <ul id="menu">
+                  <li><a href="{{ url_for('index') }}">Home</a></li>
+                  <li><a href="{{ url_for('about_us') }}">About Us</a></li>
+                  <li><a href="{{ url_for('login') }}">Login</a></li>
+                  <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+    </header>
+    <!-- ~ main content part -->
+    <section class="main-container">
+        <div class="inner-section">
+            <h1 id="main-heading">About Us</h1>
+            <div class="inner-div">
+                <img  id="logo-1" src="{{ url_for('static', filename='images2/logo1.jpg') }}" alt="logo">
+                <p id="main-content">Welcome to our platform, a one-stop solution for all your parking needs! We are dedicated to helping people find
+                  parking areas near them in their region or in regions where they are new, making parking a hassle-free experience.
+                  
+                  With our user-friendly interface, you can easily search for parking areas in your vicinity and get real-time information
+                  on how many slots are available in each parking area. You can even pre-book your parking slot, ensuring a seamless
+                  parking experience upon arrival.
+                  
+                  One unique feature of our platform is the ability to compare parking charges of different parking areas, allowing you to
+                  make an informed decision based on your budget and preferences. We believe in transparency and strive to provide
+                  accurate and up-to-date information on parking charges to help you plan your parking expenses effectively.
+                  
+                  We understand that finding permanent parking on a daily basis can be challenging in many cities. Therefore, we also
+                  provide a platform for parking area owners to register their parking spaces, making it convenient for people to find
+                  permanent parking solutions. If you own a parking space, you can easily register it with us and make it available for
+                  those in need.
+                  
+                  In addition, we also collaborate with individuals who offer personalized parking services. So if you're someone who has
+                  a spare parking space that you're willing to share, you can register with us and provide parking services to those who
+                  are in search of a safe and convenient parking spot.
+                  
+                  At our website/app, we prioritize user experience and aim to simplify the parking process for you. We also provide
+                  navigation assistance within the parking areas, making it easier for you to find your parked vehicle when you're ready
+                  to leave.
+                  
+                  To enhance your experience further, we offer a yearly subscription plan at a nominal cost of INR 200-250, providing you
+                  with additional benefits and exclusive features to make your parking experience even more convenient and seamless.
+                  
+                  We are committed to revolutionizing the way people park, making it hassle-free, convenient, and cost-effective. Join us
+                  today and experience a whole new level of parking convenience!</p>
+            </div>
+        </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>

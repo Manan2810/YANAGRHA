@@ -9,7 +9,7 @@
 			href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="/css/search.css">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/search.css') }}">
 		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 	</head>
 	<body>
@@ -34,13 +34,12 @@
 					
 				</div>
 			</div>
-			<a href="HTML/explore1.html"><button class="button button--checkout">
+			<a href="{{ url_for('explore1') }}"><button class="button button--checkout">
 				<i class="fas fa-caret-circle-right"></i>
-				<a href="/HTML/explore2.html">Explore</a>
+				<a href="{{ url_for('explore2') }}">Explore</a>
 			  </button></a>
 			  
 		</form>
-		<script src="/JAVASCRIPT/explore.js"></script>
-       
+		<script src="{{ url_for('static', filename='JAVASCRIPT/explore.js') }}"></script>
 	</body>
 </html>

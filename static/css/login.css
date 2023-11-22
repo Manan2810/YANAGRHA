@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans&family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap');
 body {
-  background-image: url(/images2/blue1.jpeg);
+  background-image: url(/static/images2/blue1.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -39,7 +39,7 @@ body {
   color: #FFFFFF;
   background-size: cover;
   background-repeat: no-repeat;
-  background: url(/images2/blue1.jpeg);
+  background: url(/static/images2/blue1.jpeg);
   overflow: hidden;
 }
 .box-form .left .overlay {
