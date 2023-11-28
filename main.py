@@ -1,8 +1,11 @@
-from flask import Flask, render_template,request, redirect, url_for
+from flask import Flask, render_template,request, redirect, url_for,send_from_directory
 from flask_mail import Mail, Message
 import json
 from flask_sqlalchemy import SQLAlchemy
 import mysql.connector
+import os
+import qrcode
+from PIL import Image
 
 
 
@@ -20,12 +23,20 @@ else:
     
 db = SQLAlchemy(app)
 
+qrcodes_dir = os.path.join(app.root_path, 'static', 'qrcodes')
+os.makedirs(qrcodes_dir, exist_ok=True)
+
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(50),unique=True,nullable=False)
     password=db.Column(db.String(50), nullable=False)
     confirm_password=db.Column(db.String(50), nullable=False)
 
+class test(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(50), nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+    phone = db.Column(db.String(15), nullable=False)
 
 @app.route('/')
 def index():
@@ -104,6 +115,48 @@ def login():
 @app.route('/payment')
 def payment():
     return render_template('payment.html')
+
+@app.route('/registration')
+def registration():
+    return render_template('registration.html')
+
+@app.route('/register', methods=['POST'])
+def register():
+    name = request.form.get('name')
+    email = request.form.get('email')
+    phone = request.form.get('phone')
+
+    new_user = test(name=name, email=email, phone=phone)
+    db.session.add(new_user)
+    db.session.commit()
+
+    # Generate QR code and save it
+    generate_qr_code(name, phone)
+
+    return redirect(url_for('success', name=name, phone=phone))
+
+@app.route('/success')
+def success():
+    name = request.args.get('name')
+    phone = request.args.get('phone')
+    return render_template('success.html', name=name, phone=phone)
+
+@app.route('/qrcodes/<filename>')
+def qrcodes(filename):
+    return send_from_directory('static/qrcodes', filename)
+
+def generate_qr_code(name, phone):
+    data_to_encode = f"Name: {name}\nPhone: {phone}"
+    qr = qrcode.QRCode(
+        version=1,
+        error_correction=qrcode.constants.ERROR_CORRECT_L,
+        box_size=10,
+        border=4,
+    )
+    qr.add_data(data_to_encode)
+    qr.make(fit=True)
+    img = qr.make_image(fill_color="black", back_color="white")
+    img.save(os.path.join(qrcodes_dir, f'{name}_{phone}.png'))
 
 if __name__ == '__main__':
     app.run(debug=True)
